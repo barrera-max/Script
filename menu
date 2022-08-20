@@ -54,24 +54,3 @@ s|S|3)exit;;
 esac
 
 done
-	
-B
-A
-A
-A
-B
-D
-D
-D
-D
-D
-C
-C
-C
-D
-D
-D
-D
-D
-C
-b|B|2 echo "COMPROBAREMOS SI LOS PARAMETROS SON ARCHIVOS:"
