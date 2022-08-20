@@ -1,0 +1,77 @@
+echo "MENU"
+
+if test $# -gt 2
+then
+	echo "Enviaste más de dos parametros!!!"
+	else
+		if test $# -lt 2
+		then
+		    echo "Enviaste menos de dos parametros!!!"
+		else
+		    echo "Enviaste dos parametros"
+		fi
+fi
+
+echo "A continuacion los parametros que enviaste:"
+for i in $*
+do
+	echo "Parametro:$i"
+done
+echo " "
+while true
+do
+echo "=== Menu ==="
+echo "1)Mostrar informacion de Memoria"
+echo "2)Comprobar si los parametros enviados son archivos+
+	agregar los procesos en forma de arbol"
+echo "S)SALIR"
+
+echo "ELIJA UNA OPCION"
+read opc
+case $opc in
+
+a|A|1) echo "INFORMACION DE MEMORIA"
+	free -m ;;
+b|B|2) echo "Comprobaremos si los parametros enviados son archivos"
+
+for i in $*
+	do
+	if test -f $i
+	then 
+	    echo "$i : Es un archivo"
+	    cat $i
+
+	  echo "-"
+	  echo "Agregaremos los procesos en forma de arbol..."
+	  `sudo pstree >> $i`
+	  cat $i
+	else
+	    echo "$i: No es un archivo"
+	fi
+	done ;;
+
+s|S|3)exit;;
+esac
+
+done
+	
+B
+A
+A
+A
+B
+D
+D
+D
+D
+D
+C
+C
+C
+D
+D
+D
+D
+D
+C
+b|B|2 echo "COMPROBAREMOS SI LOS PARAMETROS SON ARCHIVOS:"
